@@ -100,12 +100,12 @@ def fl():
 			}
 
 			response = requests.post(f'https://www.instagram.com/web/friendships/{idjob}follow/',headers=headers)
-			sleep(2)
+			sleep(5)
 			duyet=requests.get(f'https://traodoisub.com/api/coin/?type=INS_FOLLOW_CACHE&id={id}&access_token={token}').json()
 			nhan=duyet['data']['msg']
 			tong=duyet['data']['pending']
 			print(f'FOLLOW {idjob} | NHẬN {nhan} | TỔNG XU ĐỢI DUYỆT {tong}')
-			sleep(10)
+			sleep(7)
 		except:
 			for i in range(5,-1,-1):
 				print(f'[DARLING]  FINDING JOB [|] ',end='\r')
@@ -151,12 +151,12 @@ def like():
 			}
 
 			response = requests.post(f'https://www.instagram.com/web/likes/{idjob}/like/', headers=headers)
-			sleep(1)
+			sleep(5)
 			duyet=requests.get(f'https://traodoisub.com/api/coin/?type=INS_LIKE_CACHE&id={idlike}&access_token={token}').json()
 			nhan=duyet['data']['msg']
 			tong=duyet['data']['pending']
 			print(f'LIKE {idjob} | NHẬN {nhan} | TỔNG XU ĐỢI DUYỆT {tong}')
-			sleep(10)
+			sleep()
 		except:
 			for i in range(5,-1,-1):
 				print(f'[DARLING]  FINDING JOB [|] ',end='\r')
@@ -205,12 +205,12 @@ def cmt():
 			}
 
 			response = requests.post(f'https://www.instagram.com/web/comments/{idjob}/add/',headers=headers, data=data)
-			sleep(1)
+			sleep(5)
 			duyet=requests.get(f'https://traodoisub.com/api/coin/?type=INS_COMMENT_CACHE&id={id}&access_token={token}').json()
 			nhan=duyet['data']['msg']
 			tong=duyet['data']['pending']
 			print(f'COMMENT {idjob} | NHẬN {nhan} | TỔNG XU ĐỢI DUYỆT {tong}')
-			sleep(10)
+			sleep(5)
 		except:
 			for i in range(5,-1,-1):
 				print(f'[DARLING] FINDING JOB [|] ',end='\r')
@@ -256,7 +256,7 @@ def likecmt():
 			}
 
 			response = requests.post(f'https://www.instagram.com/web/comments/like/{idjob}/',headers=headers)
-			sleep(1)
+			sleep(5)
 			duyet=requests.get(f'https://traodoisub.com/api/coin/?type=INS_LIKECMT_CACHE&id={id}&access_token={token}').json()
 			nhan=duyet['data']['msg']
 			tong=duyet['data']['pending']
